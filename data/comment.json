@@ -1,0 +1,15 @@
+[       {
+            "post_id":1,
+    		"avatar": "upload/user/1399944710.jpg",
+    		"username": "Sang Nguyen",
+    		"created": "2014-04-15 14:40:03",
+    		"content": "Đây chỉ là bài đăng để thử plugin hiển thị code thôi :D"
+    	},
+    	{
+            "post_id":2,
+    		"avatar": "upload/user/default_avatar.jpg",
+    		"username": "Winter Soldier",
+    		"created": "2014-04-15 14:30:23",
+    		"content": "Bình luận với avatar mặc định."
+    	}
+]

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi" ng-app="demoApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO -->
+    <title>Sang Nguyen ' Blog</title>
+    <meta name="keywords" content="blog">
+    <meta name="description" content="Blog.vn">
+
+    <!-- Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Trang blog cá nhân">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="Blog.vn">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="article:author" content="https://www.facebook.com/sangnguyen2603">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+
+    <div id="header" class="container">
+        <div class="row">
+            <div class="col-xs-8">
+                <a href="/#/">
+                    <img id="logo" src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <form method="POST" action="" id="search-form" class="col-xs-4">
+			<div class="form-group">
+                        <input class="form-control" name="q" placeholder="Tìm kiếm" type="text" value="" ng-model='title'>
+						<span class="fa fa-search"></span>
+                    </div>
+
+            </form>        </div>
+    </div>
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/#/"><i class="fa fa-home"></i>Trang chủ</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" ng-controller="loginController">
+            <li class="dropdown" ng-hide="check" >
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Thành viên<b class="caret"></b></a>
+                <div class="dropdown-menu">
+                    <form id="login_form" action="" method="post" class="form" role="form" name="formLogin" ng-submit="login()">
+                        <span class="text-danger" ng-show="Error">Sai email hoặc mật khẩu !</span>
+                        <div class="form-group">
+                            <input name="email" ng-model="email" type="email" class="form-control"  placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input name="password" ng-model="password" type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Đăng nhập</button>
+                            <a href="/#/register" class="btn btn-warning"><i class="fa fa-user"></i> Đăng ký</a>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li class="dropdown" ng-show="check">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" >{{user}}<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/#/"><i class="fa fa-android"></i> Trang quản trị</a></li>
+                        <li><a href="/#/info"><i class="fa fa-user"></i> Thông tin cá nhân</a></li>
+                        <li><a href="" ng-click="logout()"><i class="fa fa-power-off"></i> Thoát</a></li>
+                    </ul>
+                </li>
+        </ul>
+                    </div><!-- /.navbar-collapse -->
+</nav>    </div>
+<div class="container" id="content">
+        <div class="row">
+                <div id="sidebar" class="col-xs-4 pull-right ">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <i class="fa fa-bars"></i>
+                Danh mục
+                <b class="fa fa-plus visible-xs visible-sm pull-right"></b>
+            </h3>
+        </div>
+                <ul class="list-group">
+        <li class="list-group-item">
+        <a href=""><i class="fa fa-angle-right"></i>PHP &amp; MySQL</a>
+        </li>
+        </ul>
+                <ul class="list-group">
+        <li class="list-group-item">
+        <a href=""><i class="fa fa-angle-right"></i>jQuery</a>
+        </li>
+        </ul>
+                <ul class="list-group">
+        <li class="list-group-item">
+        <a href=""><i class="fa fa-angle-right"></i>Javascript</a>
+        </li>
+        </ul>
+                </div>           </div>
+            <div ng-view></div>
+    </div>
+</div>
+    <div class="container" id="extension">
+        <div id="footer">
+            Copyright © 2014 by sangnguyenplus@gmail.com
+        </div>
+        <a href="#" id="toTop" title="Back to top"><span id="toTopHover"></span>To Top</a>
+    </div>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

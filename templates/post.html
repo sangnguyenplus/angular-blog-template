@@ -1,0 +1,72 @@
+<div id="main" class="col-xs-8">
+
+<div class="post-detail thumbnail" ng-repeat="p in post">
+    <h1 class="post-title">{{p.title}}</h1>
+    <div class="post-info">
+        <span class="author">
+                <i class="fa fa-user"></i>
+                By:
+                                                <a href="/#/info">{{p.author}}</a>
+                                            </span>
+        <span class="category">
+            <i class="fa fa-th-large"></i>
+                                                <a href="category/1">{{p.category}}</a>
+                                        </span>
+        <span class="create-time">
+            <i class="fa fa-calendar"></i>
+            {{p.created}}      </span>
+        <span class="number-view">
+            <i class="fa fa-eye"></i>
+            {{p.number_view}} lượt xem
+        </span>
+    </div>
+    <div class="post-content text-justify">
+        {{p.content}}
+    </div>
+        <br><br>
+        <div style="color: #428bca">Chỉnh sửa lần cuối vào lúc: 2014-04-21 16:37:43</div>
+        <div id="comments">
+        <h1 class="comment-header">Bình luận : </h1>
+                    <div class="alert alert-success" ng-hide="show">Hãy đăng nhập để sử dụng chức năng bình luận.</div>
+            <!--Comment form-->
+            <div class="comment-form" ng-show="show">
+            <form id="comment_form" name="form" method="POST" action="" ng-submit="addComment()" >
+                <input name="post_id" type="hidden" value="42">
+                <div class="form-group">
+                    <textarea  rows="4"  class="form-control" name="comment" ng-model="comment" placeholder="Nội dung bình luận"></textarea>
+                </div>
+                <div class="form-group">
+                    <input id="submit" type="submit" class="btn btn-primary" value="Gửi bình luận">
+                </div>
+            </form>
+        </div>
+        <!--End comment form-->
+                <div class="comments-body">
+                <div class="list-group" ng-repeat="c in comments">
+
+            <div class="comment list-group-item clearfix">
+            <div class="col-sm-1">
+                <div class="row">
+                <a href="info/1"><img src="{{c.avatar}}" alt="{{c.username}}"></a>
+            </div>
+
+            </div>
+            <div class="col-sm-11">
+                <div>
+                    <a href="/#/info">{{c.username}}</a>
+                    <small><i class="fa fa-calendar"></i>{{c.created | date:'yyyy-MM-dd HH:mm:ss'}}</small>
+                </div>
+                <div>{{c.content}}</div>
+            </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+        <link href="../plugins/syntaxhighlighter/css/shCore.css" rel="stylesheet" type="text/css">
+        <link href="../plugins/syntaxhighlighter/css/shThemeEclipse.css" rel="stylesheet" type="text/css">
+        </div>

@@ -1,0 +1,9 @@
+.menu a{display:inline-block;padding:15px;margin:0 15px 15px 0;text-align:center;text-decoration:none;border:1px solid #ddd;border-radius:10px;}
+.menu a .fa{display:block;font-size:40px;margin:0 auto;}
+.pagination{margin-top:0;}
+.treeview,.treeview ul{padding:0;margin:0;list-style:none;}
+.treeview li{margin:0;padding:0 0 0 18px;background:url(../images/treeview.gif) 0 -36px no-repeat;overflow:hidden;}
+.treeview li:last-child{background-position:0 -1796px;}
+.treeview li .hitArea{float:left;height:16px;width:16px;margin:4px 0 4px -18px;cursor:pointer;background:url(../images/treeview.gif) 0 -16px no-repeat;}
+.treeview li.treeview-close>.hitArea{background-position:0 0;}.treeview li>ul{display:block;}
+.treeview li.treeview-close>ul{display:none;}
