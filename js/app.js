@@ -93,19 +93,19 @@ var demoApp = angular.module('demoApp', ['ngRoute', 'ngCookies'])
     }])
 	.config(['$routeProvider',function ($routeProvider) {
 		$routeProvider
-		.when('/angular-blog-template/', {
+		.when('/', {
 			templateUrl: 'templates/index.html',
 			controller: 'HomeCtrl'
 		})
-		.when('/angular-blog-template/post/:id', {
+		.when('/post/:id', {
 			templateUrl: 'templates/post.html',
 			controller: 'PostCtrl'
 		})
-		.when('/angular-blog-template/register', {
+		.when('/register', {
 			templateUrl: 'templates/register.html',
 			controller: 'RegisterCtrl'
 		})
-		.when('/angular-blog-template/info', {
+		.when('/info', {
 			templateUrl: 'templates/info.html',
 			controller: 'InfoCtrl'
 		})
