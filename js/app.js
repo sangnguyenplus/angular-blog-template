@@ -82,7 +82,7 @@ var demoApp = angular.module('demoApp', ['ngRoute', 'ngCookies'])
       });
     	$scope.addComment = function(){
       		$scope.comments.push(
-      			{post_id: $routeParams.id, avatar: 'upload/user/default_avatar.jpg', username: $cookieStore.get('logined'), 
+      			{post_id: $routeParams.id, avatar: 'upload/user/default_avatar.jpg', username: $cookieStore.get('logined'),
             created: Date.now(), content: $scope.comment});
           $scope.comment='';
 		  }
@@ -93,19 +93,19 @@ var demoApp = angular.module('demoApp', ['ngRoute', 'ngCookies'])
     }])
 	.config(['$routeProvider',function ($routeProvider) {
 		$routeProvider
-		.when('/', {
+		.when('angular-blog-template/', {
 			templateUrl: 'templates/index.html',
 			controller: 'HomeCtrl'
 		})
-		.when('/post/:id', {
+		.when('angular-blog-template/post/:id', {
 			templateUrl: 'templates/post.html',
 			controller: 'PostCtrl'
 		})
-		.when('/register', {
+		.when('angular-blog-template/register', {
 			templateUrl: 'templates/register.html',
 			controller: 'RegisterCtrl'
 		})
-		.when('/info', {
+		.when('angular-blog-template/info', {
 			templateUrl: 'templates/info.html',
 			controller: 'InfoCtrl'
 		})
